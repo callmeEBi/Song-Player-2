@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: vazirmatn;
+  height: 100vh;
+  background: linear-gradient(to right bottom, #b39ddb, #f44336);
+}
+
+.main_heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.musics {
+  height: 80%;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+.music {
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.music1 {
+  background: url(../media/covers/2PacRemix.jpg);
+  background-size: cover;
+}
+
+.music2 {
+  background: url(../media/covers/Ghazi\ Mano\ Doost\ Dasht.jpg);
+  background-size: cover;
+}
+
+.music3 {
+  background: url(../media/covers/Rooz.jpg);
+  background-size: cover;
+}
+
+.music4 {
+  background: url(../media/covers/TabrizDarMeh.jpg);
+  background-size: cover;
+}
+
+.music:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  .play {
+    display: grid;
+  }
+}
+
+.music:active {
+  transform: scale(1);
+}
+
+.play {
+  display: none;
+  width: 100%;
+  height: 110%;
+  background-color: rgba(240, 240, 240, 0.5);
+  filter: brightness(120%);
+  place-items: center;
+  animation: moveUp 0.3s ease-out;
+}
+
+[class$="icon"] {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
